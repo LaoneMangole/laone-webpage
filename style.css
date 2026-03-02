@@ -8,20 +8,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:rgb(192, 126, 59);
+    background-color:rgb(0, 0, 0);
 
 }
 .container {
     height: 270px;
     width: 550px;
     border-radius: 8px;
-    background-color:rgb(23, 23, 25);
+    background-color:rgb(9, 136, 227);
     border: 1.3px solid #ddd;
 }
 .sidebar{
     width: 60px;
     height: 100%;
-    background-color:deepskyblue;
+    background-color:rgb(6, 2, 119);
     padding: 20px;
     box-sizing: border-box;
     color: #fff;
