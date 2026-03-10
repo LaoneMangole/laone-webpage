@@ -1,71 +1,85 @@
-* {
+/*##### RESET & BASE STYLES #####*/
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
-    font-family: sans-serif;
+    /*background: linear-gradient(135deg, #0c0f17 0%, #151925 100%);*/
+    background-color:lightblue;
+    color: #e6e9f0;
     min-height: 100vh;
+    overflow-x: hidden;
+
+}
+
+/*##### HEADER & NAVIGATION #####*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(12, 15, 23, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(42, 252, 133, 0.1)
+}
+
+.logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color:rgb(0, 0, 0);
-
-}
-.container {
-    height: 270px;
-    width: 550px;
-    border-radius: 8px;
-    background-color:rgb(9, 136, 227);
-    border: 1.3px solid #ddd;
-}
-.sidebar{
-    width: 60px;
-    height: 100%;
-    background-color:rgb(6, 2, 119);
-    padding: 20px;
-    box-sizing: border-box;
-    color: #fff;
-    overflow: hidden;
-    border-radius: 8px 0 0 8px;
-    border-right: none;
-    transition: width .75s ease;
-
-
-}
-.sidebar:hover{
-    width: 200px;
-
-}
-ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-
-}
-li {
-    padding: 10px 10px;
-    border-bottom: 2px solid #ff6348;
-    border-radius: .5rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-li:hover {
-    background-color: #ff6348;
-}
-nav.link {
-    display: inline-flex;
-    column-gap: 1rem;
-    color: inherent;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e6e9f0;
     text-decoration: none;
+
 }
-.item-txt {
-    padding-left: .5rem;
+
+.logo-text {
+    background: linear-gradient(90deg, #e6e9f0 0%, #2afc85 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.attribute {
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a{
+    color: #c2c6d3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color o.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+nav a:hover {
+    color: #2afc85;
+
+}
+
+nav a::after {
+    content: '';
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2afc85;
+    transition: width o.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
     
 }
