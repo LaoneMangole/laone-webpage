@@ -34,12 +34,10 @@ header {
 .logo {
     display: flex;
     align-items: center;
-
     gap: 10px;
     font-size: 1.5rem;
     font-weight: 700;
     color: #e6e9f0;
-
     text-decoration: none;
 
 }
